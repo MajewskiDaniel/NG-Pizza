@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <app-header class="header" (searchQuery)="filterPizzas($event)"></app-header>
+  <!-- TODO 15: Zrobic zaznaczanie pizzy (wyroznianie kolorem: zielonym tlo) -->
+  <ul>
+    <li *ngFor="let pizza of pizzas | filter: filterQuery">
+      <app-pizza-item
+        [pizza]="pizza"
+        (removePizza)="removePizzaHandler($event)"
+      ></app-pizza-item>
+    </li>
+  </ul>
+  <div class="footer">
+    <mat-paginator
+      class="paginator"
+      [length]="totalPizzas"
+      [pageSize]="pageSize"
+      [hidePageSize]="true"
+      (page)="pageChangeHandler($event.pageIndex)"
+    >
+    </mat-paginator>
+  </div>
+  <!-- DONE 9: Zaimplementuj formularz dodawania pizzy (nazwa, adres obrazka, opis) w oddzielnym komponencie PizzaEditor z uwzglednieniem walidacji -->
+
+  <!-- DONE 13: Przygotować styl/layout strony (kafelki pizzy jak przy pokemonacg): bootstrap, material, flex system.  -->
+
+  <!-- TODO 14: Stworzyć komponent nagłówek z nawigacją (home, pizza, search pizza (filtrowanie otrzymanych z get'a wyników), komentarze) -->
+</div>

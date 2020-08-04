@@ -1,0 +1,10 @@
+<ng-container *ngIf="pizza; else loading">
+  <app-pizza-editor
+    [pizza]="pizza"
+    (onSave)="onSaveHandler($event)"
+  ></app-pizza-editor>
+</ng-container>
+
+<ng-template #loading>
+  LOADING...
+</ng-template>

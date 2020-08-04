@@ -1,0 +1,8 @@
+<ng-container *ngIf="pizza; else loading">
+  <div class="container">
+    <app-pizza-item class="item" [pizza]="pizza"></app-pizza-item>
+  </div>
+</ng-container>
+<ng-template #loading>
+  LOADING...
+</ng-template>

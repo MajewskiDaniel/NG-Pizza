@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  background-color: rgb(59, 59, 59);
+  color: gray;
+}
+h1,
+input,
+.add {
+  margin: 15px 50px;
+}
+
+.add {
+  background-color: slategrey;
+  color: lightgray;
+  text-decoration: none;
+  line-height: 40px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+input {
+}
